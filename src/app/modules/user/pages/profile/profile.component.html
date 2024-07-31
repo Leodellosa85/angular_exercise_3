@@ -1,0 +1,23 @@
+<div class="container">
+    <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+        <div class="form-group">
+            <br>
+            <label for="name">Name</label>
+            <input [(ngModel)] = "model.name" name="name" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input [(ngModel)] = "model.email" name="email" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="bio">Bio</label>
+            <input [(ngModel)] = "model.bio" name="bio" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="status">Status</label>
+            <input [(ngModel)] = "model.status" name="status" type="text" class="form-control">
+            <br>
+        </div>
+        <app-command-bar></app-command-bar>
+    </form>
+</div>

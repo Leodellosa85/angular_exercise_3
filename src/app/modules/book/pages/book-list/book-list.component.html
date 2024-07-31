@@ -1,0 +1,11 @@
+<!-- <div *ngFor="let data of books">
+    <app-book-item [bookInput]="data" >
+    </app-book-item>
+</div> -->
+
+<div *ngFor="let data of books; let i = index">
+    <app-book-item [bookInput]="data"
+    (editActionEmitter)="edit($event)"
+    (deleteActionEmitter)="delete($event)"
+     ></app-book-item>
+</div>
